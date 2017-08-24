@@ -1,0 +1,20 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Photos List
+    </h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-6 col-md-4" *ngFor="let photo of photos; let i=index">
+        <div class="thumbnail" *ngIf="i < 5">
+          <img src="{{photo.thumbnailUrl}}" alt="{{photo.title}}">
+          <div class="caption">
+            <h3>{{photo.id}} - {{photo.title}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" (click)="backToAlbums()">Back</button>
+  </div>
+</div>
