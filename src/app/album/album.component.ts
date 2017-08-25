@@ -8,7 +8,7 @@ import { Album } from '../_model/album';
 @Component({
   selector: 'app-album',
   templateUrl: './album.component.html',
-  styleUrls: ['./album.component.css']
+  styleUrls: ['./album.component.scss']
 })
 export class AlbumComponent implements OnInit {
 
@@ -35,10 +35,6 @@ export class AlbumComponent implements OnInit {
 
   backToUsers(){
     this.location.back();
-  }
-
-  showPhotos(id){
-    this.router.navigate(['albums', id, 'photos']);
   }
 
 }

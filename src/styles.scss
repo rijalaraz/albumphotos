@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+.info {
+    cursor: pointer;
+}
+
+// Les overrides de Bootstrap doivent être avant l'import de Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';

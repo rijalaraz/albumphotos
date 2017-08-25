@@ -8,7 +8,7 @@ import { PhotoService } from '../_service/photo.service';
 @Component({
   selector: 'app-photo',
   templateUrl: './photo.component.html',
-  styleUrls: ['./photo.component.css']
+  styleUrls: ['./photo.component.scss']
 })
 export class PhotoComponent implements OnInit {
 

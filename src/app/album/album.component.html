@@ -1,24 +1,9 @@
-<div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">
-        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Albums List
-      </h3>
+<div class="container">
+    <h3>Albums List</h3>
+    <div class="list-group">
+      <a [routerLink]="['/albums/' + album.id + '/photos']" *ngFor="let album of albums" class="list-group-item list-group-item-action">
+          {{album.id}} - {{album.title}}
+      </a>
     </div>
-    <div class="panel-body">
-      <table class="table table-sm">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Title</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="info" *ngFor="let album of albums" (click)="showPhotos(album.id)">
-              <td>{{album.id}}</td>
-              <td>{{album.title}}</td>
-            </tr>
-          </tbody>
-        </table> 
-        <button class="btn btn-primary" (click)="backToUsers()">Back</button>
-    </div>
-  </div>
+    <button class="btn btn-primary" (click)="backToUsers()">Back</button>
+</div>
